@@ -5,6 +5,7 @@ const geocode = require('./utils/geocode')
 const forecast = require('./utils/forecast')
 
 const app = express()
+const port = process.env.PORT || 3000
 
 //Define path for express config
 const staticHtmlDirectory = path.join(__dirname,'../public')
@@ -103,6 +104,6 @@ app.get('*',(req,res)=>{
 })
 
 
-app.listen(3000,()=>{
-    console.log('Port 3000 currently listening the request...!')
+app.listen(port,()=>{
+    console.log('Port '+port +' currently listening the request...!')
 })
