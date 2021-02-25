@@ -14,7 +14,7 @@ const forecast = (latitude,longitude,callback)=>{
         }
         else
         {
-            callback(undefined,'Daily Wind Speed : '+body.daily[0].wind_speed + ' . It is currently ' + body.current.temp + ' degrees out. There is a ' + body.current.weather[0].main + ' Weather')
+            callback(undefined,'Daily Wind Speed : '+body.daily[0].wind_speed + ' . It is currently ' + body.current.temp + ' degrees out. This high today is ' + body.daily[0].temp.max + ' with a low of ' + body.daily[0].temp.min + '. There is a ' + body.current.weather[0].main + ' Weather')
         }   
     })
 }
